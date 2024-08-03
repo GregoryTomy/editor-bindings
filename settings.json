@@ -1,84 +1,261 @@
 {
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
+    "editor.copyWithSyntaxHighlighting": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.emptySelectionClipboard": false,
+    "workbench.editor.enablePreview": false,
+    "window.newWindowDimensions": "inherit",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.snippetSuggestions": "top",
+    "editor.detectIndentation": false,
+    "window.nativeFullScreen": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "terminal.integrated.inheritEnv": false,
     "editor.fontLigatures": true,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": true,
     "editor.lineNumbers": "relative",
-    "workbench.iconTheme": "fira-code-material-minimal",
+    "workbench.colorCustomizations": {
+        // "editor.background": "#616161",
+        // "editor.foreground": "#4c566b",
+    },
+    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": "single",
+    "editor.minimap.enabled": false,
+    "window.titleBarStyle": "native",
+    ///////////////////////////////////////////////////////////////////////
+    // APC Settings
+    "apc.electron": {
+        "titleBarStyle": "hidden",
+        "frame": false,
+        "transparent": true,
+        "vibrancy": "ultra-dark"
+    },
+    "apc.font.family": "Fira Code",
+    "apc.stylesheet": {
+    },
+
+    ///////////////////////////////////////////////////////////////////////
     "tabnine.experimentalAutoImports": true,
     "python.defaultInterpreterPath": "/Users/gregorytomy/miniconda3/envs/statistical-rethinking-2023",
     "jupyter.askForKernelRestart": false,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    "workbench.colorTheme": "Daobeam",
-    "workbench.activityBar.location": "bottom",
+    "sqltools.highlightQuery": false,
     "kite.showWelcomeNotificationOnStartup": false,
     "python.analysis.extraPaths": [],
-
     //  Vim motion set up
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         // Navigation
         // switch between buffers
-        { "before": ["<S-h>"], "commands": [":bprevious"] },
-        { "before": ["<S-l>"], "commands": [":bnext"] },
-
+        {
+            "before": [
+                "<S-h>"
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<S-l>"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
         // splits
-        { "before": ["leader", "v"], "commands": [":vsplit"] },
-        { "before": ["leader", "s"], "commands": [":split"] },
-
-            // panes
         {
-            "before": ["leader", "h"],
-            "commands": ["workbench.action.focusLeftGroup"]
+            "before": [
+                "leader",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
         },
         {
-            "before": ["leader", "j"],
-            "commands": ["workbench.action.focusBelowGroup"]
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                ":split"
+            ]
+        },
+        // panes
+        {
+            "before": [
+                "leader",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
         },
         {
-            "before": ["leader", "k"],
-            "commands": ["workbench.action.focusAboveGroup"]
+            "before": [
+                "leader",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.focusBelowGroup"
+            ]
         },
         {
-            "before": ["leader", "l"],
-            "commands": ["workbench.action.focusRightGroup"]
+            "before": [
+                "leader",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.focusAboveGroup"
+            ]
         },
-          // NICE TO HAVE
-    { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "q"], "commands": [":q!"] },
-    { "before": ["leader", "x"], "commands": [":x!"] },
-    {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
-    },
-    {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
-    },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
-    {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
-    }
-  ],
-  "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
-    // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-    // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+        {
+            "before": [
+                "leader",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        // NICE TO HAVE
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                ":q!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "x"
+            ],
+            "commands": [
+                ":x!"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        // Move selected lines while staying in visual mode
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        // toggle comment selection
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        }
     ],
     "vim.easymotion": true,
     "vim.enableNeovim": true,
@@ -115,6 +292,22 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "terminal.integrated.fontSize": 14,
-    "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    "Prettier-SQL.SQLFlavourOverride": "snowflake",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "zig.path": "zig",
+    "zig.zls.path": "zls",
+    "zig.initialSetupDone": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "workbench.preferredDarkColorTheme": "After Dark",
+    "workbench.colorTheme": "Dimi Theme (Darker)",
+    "snowflake.connectionsConfigFile": "/Users/gregorytomy/.snowflake/connections.toml",
+    "workbench.statusBar.visible": false,
+    "snowflake.enableNativeAppPanel": true,
+    // "r.rterm.mac": "/Library/Frameworks/Python.framework/Versions/3.11/bin/radian",
 }
