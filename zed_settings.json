@@ -4,13 +4,13 @@
     "model_parameters": [],
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-thinking-latest"
+      "model": "claude-sonnet-4-latest"
     }
   },
-  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "FiraMono Nerd Font Mono",
   "icon_theme": "Catppuccin Macchiato",
   "theme": "Vague",
-  "buffer_font_size": 13,
+  "buffer_font_size": 14.5,
   "vim_mode": true,
   "git_panel": {
     "dock": "right"
@@ -36,18 +36,11 @@
     "enabled": true,
     "coloring": "indent_aware"
   },
-  "languages": {
-    "Elixir": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      }
-    }
-  },
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
   },
   "terminal": {
     "env": {
@@ -73,5 +66,34 @@
   },
   "outline_panel": {
     "dock": "right"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyrefly", "ruff", "!pyright", "!pylsp"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "pyrefly": {
+      "binary": {
+        "path": "/Users/prv-GTomy/miniconda3/envs/datascience/bin/pyrefly",
+        "arguments": ["lsp"]
+      },
+      "settings": {
+        "python": {
+          "pythonPath": "/Users/prv-GTomy/miniconda3/envs/datascience/bin/python"
+        },
+        "pyrefly": {
+          "python_interpreter": "/Users/prv-GTomy/miniconda3/envs/datascience/bin/python"
+        }
+      }
+    }
   }
 }
