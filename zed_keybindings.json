@@ -30,7 +30,7 @@
       // Go to file with `gf`
       "g f": "editor::OpenExcerpts",
 
-      "space a a": "assistant::ToggleFocus"
+      "space a a": "agent::ToggleFocus"
     }
   },
   {
@@ -133,7 +133,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-/": "terminal_panel::Toggle"
+      "ctrl-/": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -144,7 +144,9 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-/": "workspace::ToggleRightDock",
-      "ctrl-n": "workspace::NewTerminal"
+      "ctrl-n": "workspace::NewTerminal",
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem"
     }
   },
   {
@@ -204,6 +206,16 @@
     "bindings": {
       "s": ["vim::PushSneak", {}],
       "S": ["vim::PushSneakBackward", {}]
+    }
+  },
+
+  {
+    "context": "GitPanel || vim_mode == normal",
+    "bindings": {
+      "shift-c": "git::Commit",
+      "shift-p": "git::Push",
+      "p": "git::Pull",
+      "q": "git_panel::Close"
     }
   }
   // Subword motion is not working really nice with `ciw`, disable for now
